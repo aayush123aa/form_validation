@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>from validation</title>
+        <link rel="stylesheet" href="cs.css">
+    </head>
+
+    <body>
+        <h2 >FORM VALIDATION</h2>
+        <div class="fs">
+            <form action="validate.php" method="post">
+            <table>
+                <tr>
+                <td>First Name</td>
+                <td><input type="text" name="aayush_fname" placeholder="First Name" required></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                <td><input type="text" name="aayush_lname" placeholder="Last Name" required></td>   
+                </tr>
+                <tr>
+                <td>Email</td>
+                <td><input type="email" name="aayush_email" placeholder="Email" required></td>   
+                </tr>
+                <tr>
+                <TD>Age</TD>
+                <td><input type="number" name="aayush_age" placeholder="Age" required></td>  
+                </tr>
+                <tr>
+                <td>Gender</td>
+                <td><select name="aaysuh_gen" id=""> 
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                </td>
+                <tr>
+                    <td>Faculty</td>
+                    <td>Computer <input type="radio" name="aayush_faculty" value="comp">  Biology <input type="radio" name="aayush_faculty" value="bio"></td>
+                </tr>
+                <tr>
+                    <td>Contact No.</td>
+                    <td><select name="aayush_con" id="">
+                        <option value="nep">+977</option>
+                        <option value="ind">+91</option>
+                        <option value="usa">+1</option>
+                        <option value="agf">+93</option>
+                        <option value="pak">+92</option>
+                    </select> <input type="number" name="aayush_con_num" placeholder="eg. 123456789"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+        </form> 
+        </div>
+       
+    </body>
+</html>
