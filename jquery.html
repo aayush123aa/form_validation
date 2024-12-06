@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>J-Query</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    body{
+         margin:0;
+ padding: 20px;
+ display: flex;
+ flex-direction: column;
+ font-family: sans-serif;
+    }
+
+
+.container{
+ display: flex;
+ flex-wrap: wrap;
+}
+.b1, .b2, #b3, .b4, #b5, #b6{
+ margin: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 150px;
+ border-radius: 5px; 
+ background-color: #202020;
+ cursor: pointer;
+}
+.b1 p, .b2 p, #b3 p, .b4 p, #b5 p, #b6 p{
+ color: white;
+}
+
+</style>
+
+</head>
+<body>
+ <div class="container">
+  <div class="b1"><p>Hide</p></div>
+  <div class="b2"><p>Show</p></div>
+  <div id="b3"><p>Change Text</p></div>
+  <div class="b4"><p>Change HTML</p></div>
+  <div id="b5"><p>Append Text</p></div>
+  <div id="b6"><p>Prepend Text</p></div>
+ </div>
+ <p id="Textbox"> This is Some Text </p>
+ 
+ <script>
+  $(document).ready(function(){
+   $(".b1").click(function(){
+    $("#Textbox").hide();
+   });
+   $(".b2").click(function(){
+    $("#Textbox").show();
+   });
+   $(".b4").click(function(){
+    $("#Textbox").html("<p><strong>The Text Is Bold</strong></p>");
+   });
+   $("#b3").click(function(){
+    $("#Textbox").text("The Text was changed");
+   });
+   $("#b5").click(function() {
+    $("#Textbox").append(" <em>This text was appended.</em>");
+   });
+
+   $("#b6").click(function() {
+    $("#Textbox").prepend("<em>This text was prepended. </em>");
+   });
+   $("#b3").mouseenter(function(){
+    alert("This Changes The Text!");
+     });
+   $("#b3").mouseleave(function(){
+   alert("The Cursor left The island");
+   });
+  });
+ </script>
+</body>
+</html>
+
